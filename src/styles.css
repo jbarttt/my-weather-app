@@ -1,0 +1,99 @@
+body {
+  padding: 50px;
+  font-family: "News Cycle", sans-serif;
+  margin-bottom: 50px;
+  background: #d6e0f0;
+}
+
+h1.title-logo {
+  font-family: "Leckerli One", cursive;
+  text-align: center;
+  font-size: 55px;
+  padding: 30px;
+}
+
+.container {
+  max-width: 600px;
+}
+
+.form-control {
+  border-radius: 10px;
+  padding: 15px;
+  font-size: 18px;
+  background: #f1f3f8;
+}
+
+.btn-outline-secondary {
+  border-radius: 10px;
+  width: 80px;
+  font-size: 18px;
+}
+
+.card {
+  border-radius: 15px;
+  background: #f1f3f8;
+}
+
+.card-body {
+  text-align: center;
+}
+
+.card-subtitle {
+  font-size: 18px;
+}
+
+.current-condition {
+  font-size: 14px;
+  font-style: italic;
+  color: #6c758d;
+}
+
+.sun-image {
+  width: 250px;
+}
+
+h3.card-subtitle {
+  font-size: 30px;
+}
+
+.units {
+  font-size: 28px;
+}
+
+.units a {
+  text-decoration: none;
+  color: #31a8e0;
+}
+
+div.six-day-forcast {
+  margin-top: 10px;
+  padding: 10px 10px;
+  border: solid;
+  border-width: 1px 1px;
+  border-color: #dfdfdf;
+  border-radius: 15px;
+  background: #f1f3f8;
+}
+
+div.col-2 {
+  text-align: center;
+}
+
+.img-thumbnail {
+  border: none;
+  background: #f1f3f8;
+}
+
+.footer {
+  text-align: center;
+  padding: 15px;
+}
+
+button#current-location {
+  text-decoration: none;
+  transition: 0.4s, ease-in-out;
+}
+
+button#current-location:hover {
+  font-size: 18px;
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Weather App</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=News+Cycle&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/styles.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://kit.fontawesome.com/4106025cb8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="container">
+
+<h1 class="title-logo">MyWeatherApp</h1>
+  <form id="search-form">
+  <div class="input-group mb-3">
+   
+    <input type="text" class="form-control" id="city-search" placeholder="Enter City Name">
+    <button class="btn btn-outline-secondary" type="submit" id="city-submit-button">Submit</button>
+    
+  </div>
+  </form>
+
+  <div class="card">
+    <div class="card-body">
+      <h1 class="card-title" id="current-city">BOSTON</h1>
+      <h2 class="card-subtitle mb-2 text-muted" id="current-date-time">Thursday 6:00 PM
+      </h2>
+      <h2 class="current-condition" id="weather-condition">
+        CLEAR
+      </h2>
+      <img class="sun-image" src="images/sun image clear.png" alt="sun">
+      <h3 class="card-subtitle mb-2 text-muted"><span class="temperature" id="current-temp">39</span>
+      <span class="units">
+      <a href="#" id="fahrenheit-link">°F</a> |
+      <a href="#" id="celsius-link">°C</a>
+      </span>
+      </h3>
+      <p class="card-text">Humidity: <span class="humidity" id="current-humidity">2</span>%
+      <br />
+      Wind: <span class="wind" id="wind-speed">5</span> mph
+      </p>
+   </div>
+  </div>
+
+  <div class="six-day-forcast">
+    <div class="row">
+      <div class="col-2">
+        Fri
+      </div>
+      <div class="col-2">
+        Sat
+      </div>
+      <div class="col-2">
+        Sun
+      </div>
+      <div class="col-2">
+        Mon
+      </div>
+      <div class="col-2">
+        Tues
+      </div>
+      <div class="col-2">
+        Wed
+      </div>  
+    </div>
+
+    <div class="row">
+      <div class="col-2">
+        <img src="images/sun behind cloud.png" class="img-thumbnail" alt="Partly Sunny">
+      </div>
+      <div class="col-2">
+        <img src="images/rain cloud.png" class="img-thumbnail" alt="Rain">
+      </div>
+      <div class="col-2">
+        <img src="images/sun behind cloud.png" class="img-thumbnail" alt="Partly Sunny">
+      </div>
+      <div class="col-2">
+        <img src="images/cloudy.png" class="img-thumbnail" alt="Cloudy">
+      </div>
+      <div class="col-2">
+        <img src="images/snow cloud.png" class="img-thumbnail" alt="Snow">
+      </div>
+      <div class="col-2">
+        <img src="images/snow cloud.png" class="img-thumbnail" alt="Snow">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-2">
+        49°F
+      </div>
+      <div class="col-2">
+        46°F
+      </div>
+      <div class="col-2">
+        56°F
+      </div>
+      <div class="col-2">
+        41°F
+      </div>
+      <div class="col-2">
+        36°F
+      </div>
+      <div class="col-2">
+        33°F
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <button type="button" class="btn btn-link" id="current-location">View Current Location<br />
+    📍</button>
+  </div>
+
+</div>
+<script src="src/scripts.js"></script>
+</body>
+</html>
+
