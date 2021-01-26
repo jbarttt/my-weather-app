@@ -28,7 +28,7 @@ displayDateTime();
 
 function displayWeather(response) {
   document.querySelector("#current-city").innerHTML = response.data.name.toUpperCase();
-  document.querySelector("#weather-condition").innerHTML = response.data.weather[0].description.toUpperCase();
+  document.querySelector("#weather-condition").innerHTML = response.data.weather[0].description;
   document.querySelector("#current-temp").innerHTML = Math.round(response.data.main.temp);
   document.querySelector("#current-humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind-speed").innerHTML = Math.round(response.data.wind.speed);
