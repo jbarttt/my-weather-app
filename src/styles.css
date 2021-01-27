@@ -61,6 +61,15 @@ h3.card-subtitle {
   font-size: 28px;
 }
 
+.units .active {
+  color: #6c758d;
+  cursor: default;
+}
+
+.units .active:hover {
+  text-decoration: none;
+}
+
 .units a {
   text-decoration: none;
   color: #31a8e0;
