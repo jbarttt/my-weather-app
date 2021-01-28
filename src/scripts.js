@@ -1,7 +1,7 @@
 
-function displayDateTime() {
+function displayDateTime(timestamp) {
 
-let currentDateTime = new Date();
+let date = new Date(timestamp);
 let days = [
   "Sunday",
   "Monday",
@@ -11,31 +11,35 @@ let days = [
   "Friday",
   "Saturday"
 ];
-let day = days[currentDateTime.getDay()];
+let day = days[date.getDay()];
+return `${day} ${formatTime(timestamp)}`
 
-let hour = currentDateTime.getHours();
-let minutes = currentDateTime.getMinutes();
+}
+
+function formatTime(timestamp) {
+let date = new Date(timestamp);
+let hour = date.getHours();
+let minutes = date.getMinutes();
 
 if(minutes < 10) {
   minutes = `0${minutes}`;
 }
 
-let dateElement = document.querySelector("#current-date-time");
-dateElement.innerHTML = `${day} ${hour}:${minutes}`
+return `${hour}:${minutes}`
 }
-
-displayDateTime();
 
 function displayWeather(response) {
   fahrenheitTemperature = response.data.main.temp;
 
   document.querySelector("#current-city").innerHTML = response.data.name.toUpperCase();
+  document.querySelector("#current-date-time").innerHTML = displayDateTime(response.data.dt * 1000);
   document.querySelector("#weather-condition").innerHTML = response.data.weather[0].description;
   document.querySelector("#current-temp").innerHTML = Math.round(fahrenheitTemperature);
   document.querySelector("#current-humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind-speed").innerHTML = Math.round(response.data.wind.speed);
   document.querySelector("#weather-icon").setAttribute("src", `images/${response.data.weather[0].icon}.png`);
   document.querySelector("#weather-icon").setAttribute("alt", response.data.weather[0].description);
+  
 }
 
 function searchCity(city) {
