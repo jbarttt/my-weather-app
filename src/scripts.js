@@ -34,6 +34,8 @@ function displayWeather(response) {
   document.querySelector("#current-temp").innerHTML = Math.round(fahrenheitTemperature);
   document.querySelector("#current-humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind-speed").innerHTML = Math.round(response.data.wind.speed);
+  document.querySelector("#weather-icon").setAttribute("src", `images/${response.data.weather[0].icon}.png`);
+  document.querySelector("#weather-icon").setAttribute("alt", response.data.weather[0].description);
 }
 
 function searchCity(city) {
