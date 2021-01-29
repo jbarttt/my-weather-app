@@ -42,12 +42,23 @@ function displayWeather(response) {
   
 }
 
+function getCoords(response) {
+  let lat = response.data.coord.lat
+  let lon = response.data.coord.lon
+  let apiKey = "4964201fe38c8af7f212aad270301c64"
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${apiKey}`
+
+  axios.get(apiUrl).then(console.log);
+}
+
 function searchCity(city) {
   let apiKey = "4964201fe38c8af7f212aad270301c64"
   let units = "imperial"
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${units}&appid=${apiKey}`
 
   axios.get(apiUrl).then(displayWeather);
+  axios.get(apiUrl).then(getCoords);
+
 }
 
 function submitCity(event) {

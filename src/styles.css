@@ -105,12 +105,3 @@ div.col-2 {
   text-align: center;
   padding: 15px;
 }
-
-button#current-location {
-  text-decoration: none;
-  transition: 0.4s, ease-in-out;
-}
-
-button#current-location:hover {
-  font-size: 18px;
-}
